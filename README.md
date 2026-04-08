@@ -77,7 +77,7 @@ This project was developed as part of a course requirement at **De La Salle Univ
 
 | Name | Role |
 |------|------|
-|      |      |
+|   Carl Calingcaling   |    Developer  |
 
 ---
 
