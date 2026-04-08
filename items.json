@@ -1,0 +1,62 @@
+[
+  {
+    "name": "DRAWING",
+    "description": "TRIAL 1",
+    "imagePath": "file:/C:/Users/calin/Downloads/STICKER.jpg",
+    "datePosted": "08/08/2025 11:47 PM",
+    "status": "Claimed",
+    "uploaderIdNumber": "123456"
+  },
+  {
+    "name": "Trial",
+    "description": "Trial",
+    "imagePath": "file:/C:/Users/calin/Downloads/White%20Minimalist%20Business%20Card%20Mockup%20Instagram%20Post%20copy.jpg",
+    "datePosted": "08/09/2025 06:29 PM",
+    "status": "Claimed",
+    "category": "General",
+    "location": "Andrew Gonzales Hall",
+    "uploaderIdNumber": "123456",
+    "claimerIdNumber": "123456",
+    "claimMessage": "Hi! I believe this item belongs to me. Thank you for finding it!"
+  },
+  {
+    "name": "Iphone",
+    "description": "sdfsdfsd",
+    "imagePath": "file:/C:/Users/calin/Downloads/Border%20copy.jpg",
+    "datePosted": "08/09/2025 06:44 PM",
+    "status": "Claimed",
+    "category": "General",
+    "location": "LOFD",
+    "uploaderIdNumber": "123456",
+    "finderName": "Carl",
+    "finderContact": "09602866285"
+  },
+  {
+    "name": "Hatdog",
+    "description": "YESSIR",
+    "imagePath": "file:/C:/Users/calin/Downloads/INFOG%20copy.jpg",
+    "datePosted": "ASDFADS",
+    "status": "Pending",
+    "category": "General",
+    "location": "DSFASDF",
+    "uploaderIdNumber": "123456",
+    "claimerIdNumber": "123456",
+    "claimMessage": "Hi! I believe this item belongs to me. Thank you for finding it!",
+    "finderName": "Test User",
+    "finderContact": "test@example.com"
+  },
+  {
+    "name": "Jersey",
+    "description": "Black and white jersey",
+    "imagePath": "file:/C:/Users/calin/Downloads/asfwaeg.jpg",
+    "datePosted": "11/13/25 10:28",
+    "status": "Claimed",
+    "category": "General",
+    "location": "AGNO",
+    "uploaderIdNumber": "123456",
+    "claimerIdNumber": "123456",
+    "claimMessage": "Hi! I believe this item belongs to me. Thank you for finding it!",
+    "finderName": "Justine",
+    "finderContact": "justine@gmail.com"
+  }
+]

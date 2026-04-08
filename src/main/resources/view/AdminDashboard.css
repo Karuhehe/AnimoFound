@@ -1,0 +1,407 @@
+/* Root and Base Styles */
+.root {
+    -fx-background-color: #f5f5f5;
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-font-size: 14px;
+}
+
+/* Header Styles */
+.header {
+    -fx-background-color: #05451c;
+    -fx-text-fill: white;
+    -fx-min-height: 80px;
+    -fx-max-height: 80px;
+}
+
+.header-title {
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.admin-user {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+
+.refresh-button {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-text-fill: white;
+    -fx-border-color: white;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 8px 16px;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+.refresh-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+}
+
+.logout-button {
+    -fx-background-color: #a10010;
+    -fx-text-fill: white;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 8px 16px;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+.logout-button:hover {
+    -fx-background-color: #ff3742;
+}
+
+.profile-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-border-color: white;
+    -fx-border-radius: 50%;
+    -fx-background-radius: 50%;
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+    -fx-max-width: 40px;
+    -fx-max-height: 40px;
+    -fx-font-size: 16px;
+    -fx-cursor: hand;
+}
+
+.profile-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Card Styles */
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 12px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 2);
+}
+
+.card-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+/* Search Field Styles */
+.search-field {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 12px 16px;
+    -fx-font-size: 14px;
+    -fx-pref-height: 45px;
+}
+
+.search-field:focused {
+    -fx-border-color: #52a356;
+    -fx-border-width: 2px;
+}
+
+/* Filter Dropdown Styles */
+.filter-dropdown {
+    -fx-background-color: white;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 8px 12px;
+    -fx-font-size: 14px;
+    -fx-pref-height: 40px;
+}
+
+.filter-dropdown:hover {
+    -fx-border-color: #52a356;
+}
+
+.filter-dropdown .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.filter-dropdown .arrow {
+    -fx-background-color: #666666;
+}
+
+/* Table Styles */
+.table {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-table-cell-border-color: #e9ecef;
+}
+
+.table .column-header-background {
+    -fx-background-color: #f8f9fa;
+}
+
+.table .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #e9ecef transparent;
+    -fx-border-width: 0 0 1px 0;
+    -fx-padding: 15px 10px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #495057;
+    -fx-font-size: 13px;
+}
+
+.table .table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent #f1f3f4 transparent;
+    -fx-border-width: 0 0 1px 0;
+    -fx-padding: 0;
+}
+
+.table .table-row-cell:hover {
+    -fx-background-color: #f8f9fa;
+}
+
+.table .table-cell {
+    -fx-padding: 15px 10px;
+    -fx-text-fill: #333333;
+    -fx-font-size: 13px;
+    -fx-alignment: CENTER_LEFT;
+}
+
+/* Delete Button Styles */
+.delete-button {
+    -fx-background-color: #ff4757;
+    -fx-text-fill: white;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 6px 12px;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-min-width: 35px;
+    -fx-min-height: 30px;
+}
+
+.delete-button:hover {
+    -fx-background-color: #ff3742;
+}
+
+.delete-button:pressed {
+    -fx-background-color: #ff2838;
+}
+
+/* Footer Styles */
+.footer {
+    -fx-background-color: #05451c;
+    -fx-text-fill: white;
+    -fx-min-height: 60px;
+    -fx-max-height: 60px;
+}
+
+.footer-text {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: normal;
+}
+
+/* Scroll Bar Styles */
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .track {
+    -fx-background-color: #f1f3f4;
+    -fx-border-color: transparent;
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #c1c1c1;
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #a1a1a1;
+}
+
+.scroll-bar .increment-button, .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0px;
+    -fx-padding: 0px;
+}
+
+.scroll-bar .increment-arrow, .scroll-bar .decrement-arrow {
+    -fx-shape: " ";
+    -fx-padding: 0px;
+}
+
+/* ComboBox Dropdown Styles */
+.combo-box-popup .list-view {
+    -fx-background-color: white;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 8, 0, 0, 2);
+}
+
+.combo-box-popup .list-view .list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 10px 15px;
+    -fx-font-size: 14px;
+}
+
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: #f8f9fa;
+}
+
+.combo-box-popup .list-view .list-cell:selected {
+    -fx-background-color: #52a356;
+    -fx-text-fill: white;
+}
+
+/* Dialog Styles */
+.dialog-pane {
+    -fx-background-color: white;
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: #52a356;
+    -fx-text-fill: white;
+    -fx-background-radius: 12px 12px 0 0;
+}
+
+.dialog-pane .header-panel .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+.dialog-pane .button-bar .button {
+    -fx-background-color: #52a356;
+    -fx-text-fill: white;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-padding: 8px 16px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.dialog-pane .button-bar .button:hover {
+    -fx-background-color: #469749;
+}
+
+.dialog-pane .button-bar .button:default {
+    -fx-background-color: #ff4757;
+}
+
+.dialog-pane .button-bar .button:default:hover {
+    -fx-background-color: #ff3742;
+}
+
+/* ================================ */
+/* NEW: COLORED STATUS BADGE STYLES */
+/* ================================ */
+
+/* Base Status Badge Styles */
+.status-badge {
+    -fx-padding: 6px 14px;
+    -fx-background-radius: 20px;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
+    -fx-min-width: 80px;
+    -fx-max-width: 120px;
+}
+
+/* User Status Colors */
+.status-active {
+    -fx-background-color: #d4edda;
+    -fx-text-fill: #155724;
+    -fx-border-color: #c3e6cb;
+    -fx-border-width: 1px;
+}
+
+.status-inactive {
+    -fx-background-color: #f8d7da;
+    -fx-text-fill: #721c24;
+    -fx-border-color: #f5c6cb;
+    -fx-border-width: 1px;
+}
+
+.status-suspended {
+    -fx-background-color: #fff3cd;
+    -fx-text-fill: #856404;
+    -fx-border-color: #ffeaa7;
+    -fx-border-width: 1px;
+}
+
+.status-pending {
+    -fx-background-color: #cce7ff;
+    -fx-text-fill: #004085;
+    -fx-border-color: #b3d9ff;
+    -fx-border-width: 1px;
+}
+
+/* Item Status/Reason Colors */
+.status-unclaimed {
+    -fx-background-color: #fff3cd;
+    -fx-text-fill: #856404;
+    -fx-border-color: #ffeaa7;
+    -fx-border-width: 1px;
+}
+
+.status-claimed {
+    -fx-background-color: #d4edda;
+    -fx-text-fill: #155724;
+    -fx-border-color: #c3e6cb;
+    -fx-border-width: 1px;
+}
+
+.status-returned {
+    -fx-background-color: #e2e3e5;
+    -fx-text-fill: #383d41;
+    -fx-border-color: #d6d8db;
+    -fx-border-width: 1px;
+}
+
+.status-fake {
+    -fx-background-color: #f8d7da;
+    -fx-text-fill: #721c24;
+    -fx-border-color: #f5c6cb;
+    -fx-border-width: 1px;
+}
+
+.status-inappropriate {
+    -fx-background-color: #fce4ec;
+    -fx-text-fill: #880e4f;
+    -fx-border-color: #f8bbd9;
+    -fx-border-width: 1px;
+}
+
+.status-spam {
+    -fx-background-color: #ffebee;
+    -fx-text-fill: #c62828;
+    -fx-border-color: #ffcdd2;
+    -fx-border-width: 1px;
+}
+
+.status-default {
+    -fx-background-color: #e9ecef;
+    -fx-text-fill: #495057;
+    -fx-border-color: #ced4da;
+    -fx-border-width: 1px;
+}
+
+/* Hover effects for status badges */
+.status-badge:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 4, 0, 0, 1);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* Enhanced table cell alignment for status columns */
+.table .table-cell {
+    -fx-alignment: CENTER_LEFT;
+}
+
+/* Animation for status changes */
+.status-badge {
+    -fx-transition: all 0.2s ease-in-out;
+}

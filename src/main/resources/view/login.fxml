@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.LoginController"
+      stylesheets="@login.css"
+      styleClass="main-container"
+      alignment="CENTER"
+      spacing="0">
+
+    <children>
+        <!-- Spacer to push content to center -->
+        <Region VBox.vgrow="ALWAYS" />
+
+        <!-- Main Content Container -->
+        <VBox alignment="CENTER" spacing="40">
+            <children>
+                <!-- Header Section -->
+                <VBox alignment="CENTER" styleClass="header-section" spacing="20">
+                    <children>
+                        <!-- DLSU Logo (without container background) -->
+                        <ImageView fx:id="dlsuLogo" fitHeight="100" fitWidth="100" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/dlsulogo.png" />
+                            </image>
+                        </ImageView>
+
+                        <!-- Title and Subtitle -->
+                        <VBox alignment="CENTER" spacing="10">
+                            <children>
+                                <Label styleClass="title" text="Welcome to Animo Found" />
+                                <Label styleClass="subtitle" text="Helping the Lasallian community return lost items easily." />
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+
+                <!-- Login Form Container -->
+                <VBox alignment="CENTER" styleClass="form-container">
+                    <children>
+                        <!-- Login Form Section -->
+                        <VBox alignment="CENTER" styleClass="form-section" spacing="20">
+                            <children>
+                                <Label styleClass="form-title" text="Login" />
+
+                                <!-- ID Number Field -->
+                                <VBox styleClass="input-group">
+                                    <children>
+                                        <Label styleClass="input-label" text="🆔 ID Number" />
+                                        <TextField fx:id="idNumberField"
+                                                   promptText="Enter your ID number"
+                                                   styleClass="custom-textfield" />
+                                    </children>
+                                </VBox>
+
+                                <!-- Password Field -->
+                                <VBox styleClass="input-group">
+                                    <children>
+                                        <Label styleClass="input-label" text="🔒 Password" />
+                                        <PasswordField fx:id="passwordField"
+                                                       promptText="Enter your password"
+                                                       styleClass="custom-textfield" />
+                                    </children>
+                                </VBox>
+
+                                <!-- Login Button -->
+                                <Button fx:id="loginButton"
+                                        mnemonicParsing="false"
+                                        onAction="#handleLogin"
+                                        styleClass="login-button"
+                                        text="✓ Login"
+                                        maxWidth="Infinity" />
+
+                                <!-- Forgot Password Link -->
+                                <Button fx:id="forgotPasswordButton"
+                                        mnemonicParsing="false"
+                                        onAction="#handleForgotPassword"
+                                        styleClass="link-button"
+                                        text="🔄 Forgot Password?" />
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+
+        <!-- Spacer to push content to center -->
+        <Region VBox.vgrow="ALWAYS" />
+    </children>
+</VBox>

@@ -1,0 +1,186 @@
+/* Main Container - Full Screen Layout */
+.main-container {
+    -fx-background-color: linear-gradient(to bottom, #e8e8e8, #d0d0d0);
+    -fx-pref-width: 1920;
+    -fx-pref-height: 1080;
+    -fx-min-width: 1920;
+    -fx-min-height: 1080;
+    -fx-max-width: 1920;
+    -fx-max-height: 1080;
+    -fx-alignment: center;
+}
+
+/* Header Section */
+.header-section {
+    -fx-spacing: 15;
+    -fx-alignment: center;
+    -fx-padding: 0;
+}
+
+.title {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4a4a4a;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.subtitle {
+    -fx-font-size: 16px;
+    -fx-text-fill: #8b7355;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-wrap-text: true;
+    -fx-max-width: 400;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+}
+/* Form Container */
+.form-container {
+    -fx-alignment: center;
+}
+
+/* Form Section */
+.form-section {
+    -fx-spacing: 20;
+    -fx-background-color: white;
+    -fx-background-radius: 8;
+    -fx-padding: 40 40 40 40;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+    -fx-min-width: 350;
+    -fx-max-width: 400;
+    -fx-alignment: center;
+}
+
+.form-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+/* Input Groups */
+.input-group {
+    -fx-spacing: 8;
+    -fx-fill-width: true;
+}
+
+.input-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #8b7355;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+/* Custom Text Fields */
+.custom-textfield {
+    -fx-font-size: 14px;
+    -fx-padding: 12 15 12 15;
+    -fx-background-color: #f5f5f5;
+    -fx-background-radius: 6;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 6;
+    -fx-border-width: 1;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-min-width: 350;
+    -fx-pref-width: 350;
+    -fx-min-height: 40;
+    -fx-text-fill: #999999;
+}
+
+.custom-textfield:focused {
+    -fx-background-color: white;
+    -fx-border-color: #4a90e2;
+    -fx-border-width: 2;
+    -fx-text-fill: #333333;
+}
+
+.custom-textfield:hover {
+    -fx-border-color: #cccccc;
+}
+
+/* Signup Button - Green style to match the design */
+.signup-button {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: #2d5016;
+    -fx-background-radius: 6;
+    -fx-padding: 12 40 12 40;
+    -fx-cursor: hand;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-min-width: 350;
+    -fx-pref-width: 350;
+    -fx-min-height: 45;
+}
+
+.signup-button:hover {
+    -fx-background-color: #1e350f;
+}
+
+.signup-button:pressed {
+    -fx-background-color: #0f1a08;
+}
+
+/* Signup Button Disabled State */
+.signup-button:disabled {
+    -fx-background-color: #888888;
+    -fx-text-fill: #cccccc;
+    -fx-cursor: default;
+}
+
+/* Link Button (Back to Login) - Gray style */
+.link-button {
+    -fx-font-size: 14px;
+    -fx-text-fill: #888888;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+    -fx-underline: false;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-padding: 10 0 0 0;
+}
+
+.link-button:hover {
+    -fx-text-fill: #666666;
+    -fx-underline: true;
+}
+
+/* Footer Section */
+.footer-section {
+    -fx-alignment: center;
+    -fx-padding: 20 0 20 0;
+}
+
+.footer-text {
+    -fx-font-size: 12px;
+    -fx-text-fill: #888888;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+/* Focus indicators for accessibility */
+.custom-textfield:focused,
+.signup-button:focused,
+.link-button:focused {
+    -fx-effect: dropshadow(gaussian, rgba(45,80,22,0.3), 4, 0, 0, 0);
+}
+
+/* Error state */
+.error-field {
+    -fx-border-color: #dc3545 !important;
+    -fx-border-width: 2 !important;
+}
+
+.error-field:focused {
+    -fx-border-color: #dc3545 !important;
+    -fx-effect: dropshadow(gaussian, rgba(220,53,69,0.4), 4, 0, 0, 0) !important;
+}
+
+/* Success state */
+.success-field {
+    -fx-border-color: #28a745 !important;
+    -fx-border-width: 2 !important;
+}
+
+.success-field:focused {
+    -fx-border-color: #28a745 !important;
+    -fx-effect: dropshadow(gaussian, rgba(40,167,69,0.4), 4, 0, 0, 0) !important;
+}

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.AdminDashboardController"
+      prefWidth="1920.0" prefHeight="1080.0"
+      styleClass="root"
+      stylesheets="@AdminDashboard.css">
+
+    <!-- Header -->
+    <HBox styleClass="header" alignment="CENTER_LEFT" spacing="10.0">
+        <padding>
+            <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+        </padding>
+        <Label text="🔍 Admin Dashboard - Animo Found" styleClass="header-title">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Region HBox.hgrow="ALWAYS" />
+        <Button text="🔄 Refresh" styleClass="refresh-button" onAction="#refreshData" />
+        <Label text="Admin User" styleClass="admin-user" />
+        <Button styleClass="profile-button" text="👤" />
+        <Button text="🚪 Logout" styleClass="logout-button" onAction="#logout" />
+    </HBox>
+
+    <!-- Main Content -->
+    <HBox VBox.vgrow="ALWAYS" spacing="30.0">
+        <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+        </padding>
+
+        <!-- Users List Section -->
+        <VBox styleClass="card" spacing="20.0" prefWidth="760.0">
+            <padding>
+                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+            </padding>
+
+            <Label text="Registered Users" styleClass="card-title">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+            </Label>
+
+            <TextField fx:id="searchUsersField" promptText="Search users..." styleClass="search-field"
+                       onKeyReleased="#handleSearchUsers" />
+
+            <TableView fx:id="usersTable" styleClass="table" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="userIdColumn" text="User ID" prefWidth="80.0" />
+                    <TableColumn fx:id="userNameColumn" text="Name" prefWidth="150.0" />
+                    <TableColumn fx:id="userEmailColumn" text="Email" prefWidth="200.0" />
+                    <TableColumn fx:id="userDateJoinedColumn" text="Date Joined" prefWidth="120.0" />
+                    <TableColumn fx:id="userStatusColumn" text="Status" prefWidth="100.0" />
+                    <TableColumn fx:id="userActionsColumn" text="Actions" prefWidth="80.0" />
+                </columns>
+            </TableView>
+        </VBox>
+
+        <!-- Reported Items Section -->
+        <VBox styleClass="card" spacing="20.0" prefWidth="760.0">
+            <padding>
+                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+            </padding>
+
+            <HBox alignment="CENTER_LEFT" spacing="20.0">
+                <Label text="Reported Items" styleClass="card-title">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Region HBox.hgrow="ALWAYS" />
+                <ComboBox fx:id="filterReasonComboBox" styleClass="filter-dropdown" prefWidth="200.0" />
+            </HBox>
+
+            <TableView fx:id="reportedItemsTable" styleClass="table" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="reportIdColumn" text="Report ID" prefWidth="90.0" />
+                    <TableColumn fx:id="itemNameColumn" text="Item Name" prefWidth="150.0" />
+                    <TableColumn fx:id="reportedByColumn" text="Reported By" prefWidth="120.0" />
+                    <TableColumn fx:id="reasonColumn" text="Status/Reason" prefWidth="120.0" />
+                    <TableColumn fx:id="reportDateColumn" text="Date" prefWidth="120.0" />
+                    <TableColumn fx:id="reportActionsColumn" text="Actions" prefWidth="80.0" />
+                </columns>
+            </TableView>
+        </VBox>
+    </HBox>
+
+    <!-- Footer -->
+    <HBox styleClass="footer" alignment="CENTER">
+        <padding>
+            <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+        </padding>
+        <Label text="AnimoFound — Lost &amp; Found System | Admin Panel" styleClass="footer-text" />
+    </HBox>
+
+</VBox>

@@ -1,0 +1,426 @@
+/* Animo Found - Claim Interface Styles - Improved Centering */
+
+/* Root ScrollPane - Ensure proper centering */
+.scroll-pane {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: transparent;
+    -fx-fit-to-width: true;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: #f8f9fa;
+}
+
+.scroll-pane .scroll-bar {
+    -fx-background-color: #e9ecef;
+}
+
+/* Main Container - Root VBox should fill width but center content */
+.main-container {
+    -fx-background-color: #f8f9fa;
+    -fx-alignment: center;
+    -fx-fill-width: true;
+}
+
+/* Header Styles - Full width but centered content */
+.header-container {
+    -fx-background-color: #f8f9fa;
+    -fx-padding: 15 20;
+    -fx-border-color: #e9ecef;
+    -fx-border-width: 0 0 1 0;
+    -fx-alignment: center-left;
+    -fx-fill-width: true;
+}
+
+/* Content Container - Key centering improvements */
+.content-container {
+    -fx-padding: 20;
+    -fx-background-color: #f8f9fa;
+    -fx-alignment: top-center;
+    -fx-spacing: 20;
+    -fx-fill-width: true;
+    -fx-max-width: infinity;
+}
+
+/* Ensure all child elements respect max-width and center properly */
+.content-container > * {
+    -fx-alignment: center;
+}
+
+/* Item Card - Improved centering */
+.item-card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+    -fx-padding: 20;
+    -fx-spacing: 15;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+    -fx-alignment: top-center;
+    -fx-max-width: 800;
+    -fx-pref-width: 800;
+    -fx-fill-width: false;
+}
+
+/* Back button container - should align left but be constrained by max width */
+.back-button-container {
+    -fx-alignment: center-left;
+    -fx-max-width: 800;
+    -fx-pref-width: 800;
+    -fx-fill-width: false;
+}
+
+/* Item Image - Centered */
+.item-image {
+    -fx-background-color: #6c757d;
+    -fx-background-radius: 8;
+}
+
+/* Image Container */
+.image-container {
+    -fx-alignment: center;
+    -fx-spacing: 8;
+}
+
+/* Image Overlay Text */
+.image-overlay {
+    -fx-text-fill: white;
+    -fx-background-color: rgba(0,0,0,0.7);
+    -fx-padding: 5 10;
+    -fx-background-radius: 3;
+    -fx-font-size: 12px;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+}
+
+/* Status Indicator Dot */
+.status-indicator {
+    -fx-font-size: 16px;
+}
+
+.status-waiting {
+    -fx-text-fill: #ffc107;
+}
+
+.status-success {
+    -fx-text-fill: #28a745;
+}
+
+.status-error {
+    -fx-text-fill: #dc3545;
+}
+
+/* Status Labels */
+.status-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.action-required-label {
+    -fx-text-fill: #dc3545;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+/* Item Information Labels */
+.item-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #212529;
+}
+
+.item-details {
+    -fx-font-size: 14px;
+    -fx-text-fill: #6c757d;
+    -fx-wrap-text: true;
+}
+
+.founder-info {
+    -fx-font-size: 14px;
+    -fx-text-fill: #495057;
+}
+
+/* Buttons */
+.claim-button {
+    -fx-background-color: #05451c;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-padding: 12 24;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-font-weight: normal;
+}
+
+.claim-button:disabled {
+    -fx-opacity: 1;
+    -fx-background-color: #05451c;
+    -fx-cursor: default;
+}
+
+.confirm-button {
+    -fx-background-color: #05451c;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+}
+
+.confirm-button:hover {
+    -fx-background-color: #343a40;
+}
+
+.message-button {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+}
+
+.message-button:hover {
+    -fx-background-color: #5a6268;
+}
+
+.back-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #6c757d;
+    -fx-underline: false;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+    -fx-padding: 5 10;
+}
+
+.back-button:hover {
+    -fx-text-fill: #495057;
+}
+
+/* Claim Request Section - Improved centering */
+.claim-request-section {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-padding: 20;
+    -fx-spacing: 15;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+    -fx-alignment: top-center;
+    -fx-max-width: 800;
+    -fx-pref-width: 800;
+    -fx-fill-width: false;
+}
+
+.claim-section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #212529;
+}
+
+/* Quote Message Box - Improved centering */
+.quote-message-box {
+    -fx-background-color: white;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 5, 0, 0, 1);
+    -fx-alignment: center;
+    -fx-fill-width: true;
+}
+
+/* Claimer Information */
+.claimer-name {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #212529;
+}
+
+.claimer-email {
+    -fx-font-size: 14px;
+    -fx-text-fill: #6c757d;
+}
+
+.claimer-message {
+    -fx-font-style: italic;
+    -fx-text-fill: #495057;
+    -fx-font-size: 14px;
+    -fx-wrap-text: true;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 4;
+    -fx-padding: 10;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 4;
+    -fx-border-width: 1;
+    -fx-text-alignment: left;
+}
+
+/* Success Section - Improved centering */
+.success-section {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-padding: 20;
+    -fx-spacing: 15;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+    -fx-alignment: center;
+    -fx-max-width: 800;
+    -fx-pref-width: 800;
+    -fx-fill-width: false;
+}
+
+.success-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #155724;
+    -fx-text-alignment: center;
+}
+
+.success-message {
+    -fx-text-fill: #6c757d;
+    -fx-font-size: 14px;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+}
+
+.success-date {
+    -fx-text-fill: #6c757d;
+    -fx-font-size: 12px;
+    -fx-text-alignment: center;
+}
+
+/* Large Success Checkmark - Centered */
+.success-checkmark {
+    -fx-font-size: 48px;
+    -fx-text-fill: #28a745;
+    -fx-alignment: center;
+}
+
+/* Success Icon Container */
+.success-icon-container {
+    -fx-alignment: center;
+    -fx-padding: 20;
+    -fx-max-width: 800;
+    -fx-pref-width: 800;
+    -fx-fill-width: false;
+}
+
+/* Button Container - Centered */
+.button-container {
+    -fx-spacing: 10;
+    -fx-alignment: center;
+    -fx-fill-width: true;
+}
+
+/* Main Content Wrapper - Key for proper centering */
+.main-content-wrapper {
+    -fx-alignment: center;
+    -fx-spacing: 20;
+    -fx-fill-width: true;
+}
+
+/* Footer Styles - Full width but centered content */
+.footer-container {
+    -fx-background-color: #05451c;
+    -fx-padding: 30 20;
+    -fx-alignment: center;
+    -fx-fill-width: true;
+}
+
+.footer-title {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
+}
+
+.footer-subtitle {
+    -fx-text-fill: #cccccc;
+    -fx-font-size: 14px;
+    -fx-text-alignment: center;
+}
+
+.footer-link {
+    -fx-text-fill: #cccccc;
+    -fx-font-size: 12px;
+    -fx-cursor: hand;
+}
+
+.footer-link:hover {
+    -fx-text-fill: white;
+}
+
+.footer-copyright {
+    -fx-text-fill: #999999;
+    -fx-font-size: 11px;
+    -fx-text-alignment: center;
+}
+
+/* Footer Links Container */
+.footer-links-container {
+    -fx-alignment: center;
+    -fx-spacing: 30;
+}
+
+/* Input Dialog Styles */
+.dialog-content {
+    -fx-pref-row-count: 4;
+    -fx-wrap-text: true;
+    -fx-background-radius: 4;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 4;
+    -fx-border-width: 1;
+    -fx-padding: 8;
+}
+
+/* Responsive Spacing */
+.content-spacing {
+    -fx-spacing: 15;
+}
+
+.section-spacing {
+    -fx-spacing: 10;
+}
+
+/* Utility Classes */
+.text-muted {
+    -fx-text-fill: #6c757d;
+}
+
+.text-primary {
+    -fx-text-fill: #007bff;
+}
+
+.text-success {
+    -fx-text-fill: #28a745;
+}
+
+.text-warning {
+    -fx-text-fill: #ffc107;
+}
+
+.text-danger {
+    -fx-text-fill: #dc3545;
+}
+
+.font-weight-bold {
+    -fx-font-weight: bold;
+}
+
+.font-italic {
+    -fx-font-style: italic;
+}
+
+/* Animation for status changes */
+.fade-in {
+    -fx-opacity: 0;
+    -fx-transition: -fx-opacity 0.3s ease-in;
+}
+
+.fade-in:showing {
+    -fx-opacity: 1;
+}

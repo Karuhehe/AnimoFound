@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextArea?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController" stylesheets="@dashboard.css">
+    <children>
+
+        <!-- Header Navigation -->
+        <HBox alignment="CENTER_LEFT" spacing="20.0" styleClass="header">
+            <children>
+                <Label text="🔍 Animo Found" styleClass="logo">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Region HBox.hgrow="ALWAYS" />
+                <Button fx:id="navDashboard" text="Dashboard" styleClass="nav-button" />
+                <Button fx:id="navReportItem" text="Report Item" styleClass="nav-button" />
+                <Button fx:id="navSearch" text="Search" styleClass="nav-button" />
+                <Button fx:id="navGallery" text="Gallery" styleClass="nav-button" onAction="#goToGallery" />
+                <Button fx:id="btnLogout" mnemonicParsing="false" onAction="#logout" styleClass="logout-button" text="🚪 Logout" />
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="50.0" right="50.0" top="20.0" />
+            </padding>
+        </HBox>
+
+        <!-- Main Content Scroll -->
+        <ScrollPane fx:id="dashboardScrollPane" fitToWidth="true" VBox.vgrow="ALWAYS" styleClass="main-scroll">
+            <content>
+                <VBox spacing="0.0">
+                    <children>
+
+                        <!-- Welcome Section -->
+                        <VBox alignment="CENTER" spacing="8.0" styleClass="welcome-section">
+                            <children>
+                                <Label text="Welcome to Animo Found" styleClass="welcome-title">
+                                    <font>
+                                        <Font name="System Bold" size="36.0" />
+                                    </font>
+                                </Label>
+                                <Label text="Help reunite lost items with their owners. Report found items or search" styleClass="welcome-subtitle" />
+                                <Label text="for your missing belongings." styleClass="welcome-subtitle" />
+                            </children>
+                            <padding>
+                                <Insets bottom="80.0" top="80.0" />
+                            </padding>
+                        </VBox>
+
+                        <!-- Action Cards -->
+                        <HBox alignment="CENTER" spacing="40.0" styleClass="action-cards-container">
+                            <children>
+                                <VBox alignment="CENTER" spacing="15.0" styleClass="action-card" onMouseClicked="#goToReport">
+                                    <children>
+                                        <VBox alignment="CENTER" styleClass="action-icon-circle">
+                                            <children>
+                                                <Label text="➕" styleClass="action-icon" />
+                                            </children>
+                                        </VBox>
+                                        <Label text="Report Item" styleClass="action-title" />
+                                        <Label alignment="CENTER" text="Found something? Report it here" styleClass="action-description" />
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="30.0" left="25.0" right="25.0" top="30.0" />
+                                    </padding>
+                                </VBox>
+
+                                <VBox alignment="CENTER" spacing="15.0" styleClass="action-card" onMouseClicked="#goToSearch">
+                                    <children>
+                                        <VBox alignment="CENTER" styleClass="action-icon-circle">
+                                            <children>
+                                                <Label text="🔍" styleClass="action-icon" />
+                                            </children>
+                                        </VBox>
+                                        <Label text="Search Item" styleClass="action-title" />
+                                        <Label alignment="CENTER" text="Looking for something lost?" styleClass="action-description" />
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="30.0" left="25.0" right="25.0" top="30.0" />
+                                    </padding>
+                                </VBox>
+
+                                <VBox alignment="CENTER" spacing="15.0" styleClass="action-card" onMouseClicked="#goToGallery">
+                                    <children>
+                                        <VBox alignment="CENTER" styleClass="action-icon-circle">
+                                            <children>
+                                                <Label text="👁" styleClass="action-icon" />
+                                            </children>
+                                        </VBox>
+                                        <Label text="View Items" styleClass="action-title" />
+                                        <Label alignment="CENTER" text="Browse all lost &amp; found items" styleClass="action-description" />
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="30.0" left="25.0" right="25.0" top="30.0" />
+                                    </padding>
+                                </VBox>
+
+                                <VBox alignment="CENTER" spacing="15.0" styleClass="action-card" onMouseClicked="#goToClaim">
+                                    <children>
+                                        <VBox alignment="CENTER" styleClass="action-icon-circle">
+                                            <children>
+                                                <Label text="📋" styleClass="action-icon" />
+                                            </children>
+                                        </VBox>
+                                        <Label text="Claim Items" styleClass="action-title" />
+                                        <Label alignment="CENTER" text="Claim your lost belongings" styleClass="action-description" />
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="30.0" left="25.0" right="25.0" top="30.0" />
+                                    </padding>
+                                </VBox>
+                            </children>
+                            <padding>
+                                <Insets bottom="60.0" left="40.0" right="40.0" top="20.0" />
+                            </padding>
+                        </HBox>
+
+                        <!-- Report Item Form Section -->
+                        <VBox fx:id="reportSection" spacing="25.0" styleClass="report-section">
+                            <children>
+                                <Label text="Report Found Item" styleClass="section-title">
+                                    <font>
+                                        <Font name="System Bold" size="24.0" />
+                                    </font>
+                                </Label>
+
+                                <!-- Photo Upload Area -->
+                                <VBox spacing="10.0">
+                                    <children>
+                                        <Label text="Upload Item Photo" styleClass="form-label" />
+                                        <VBox fx:id="uploadImageBox" onMouseClicked="#handleBrowseImage" alignment="CENTER" spacing="5.0" styleClass="upload-area">
+                                            <children>
+                                                <Label text="📷" styleClass="upload-icon" />
+                                                <Label text="Click to upload or drag and drop" styleClass="upload-text" />
+                                                <Label fx:id="fileNameLabel" text="No image selected" />
+                                                <ImageView fx:id="previewImage" fitWidth="200" fitHeight="150" preserveRatio="true" visible="false" />
+                                            </children>
+                                            <padding>
+                                                <Insets bottom="10.0" top="145.0" />
+                                            </padding>
+                                        </VBox>
+                                    </children>
+                                </VBox>
+
+                                <!-- Form Fields -->
+                                <HBox spacing="20.0">
+                                    <children>
+                                        <VBox spacing="8.0" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <Label text="Your Name" styleClass="form-label" />
+                                                <TextField fx:id="yourNameField" styleClass="form-field" />
+                                            </children>
+                                        </VBox>
+                                        <VBox spacing="8.0" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <Label text="Item Name" styleClass="form-label" />
+                                                <TextField fx:id="itemNameField" styleClass="form-field" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+
+                                <VBox spacing="8.0">
+                                    <children>
+                                        <Label text="Item Description" styleClass="form-label" />
+                                        <TextArea fx:id="itemDescriptionArea" prefRowCount="4" styleClass="form-textarea" />
+                                    </children>
+                                </VBox>
+
+                                <HBox spacing="20.0">
+                                    <children>
+                                        <VBox spacing="8.0" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <Label text="Location Found" styleClass="form-label" />
+                                                <TextField fx:id="locationField" styleClass="form-field" />
+                                            </children>
+                                        </VBox>
+                                        <VBox spacing="8.0" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <Label text="Date &amp; Time Found" styleClass="form-label" />
+                                                <TextField fx:id="dateTimeField" promptText="mm/dd/yyyy --:-- --" styleClass="form-field" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+
+                                <VBox spacing="8.0">
+                                    <children>
+                                        <Label text="Contact Information" styleClass="form-label" />
+                                        <TextField fx:id="contactField" promptText="Mobile number or Email" styleClass="form-field" />
+                                    </children>
+                                </VBox>
+
+                                <!-- Feedback Label -->
+                                <Label fx:id="feedbackLabel" styleClass="form-feedback" textFill="green" />
+
+                                <!-- Submit Button -->
+                                <Button fx:id="submitButton" text="Submit" onAction="#handleSubmitReport" prefWidth="150" styleClass="submit-button" />
+
+                            </children>
+                            <padding>
+                                <Insets bottom="50.0" left="60.0" right="60.0" top="30.0" />
+                            </padding>
+                        </VBox>
+
+                        <!-- Search Section -->
+                        <VBox fx:id="searchSection" spacing="25.0" styleClass="search-section">
+                            <children>
+                                <Label text="Search Lost &amp; Found Items" styleClass="section-title">
+                                    <font>
+                                        <Font name="System Bold" size="24.0" />
+                                    </font>
+                                </Label>
+
+                                <HBox spacing="15.0" alignment="CENTER">
+                                    <children>
+                                        <TextField fx:id="searchNameField" promptText="Item name" styleClass="search-field" HBox.hgrow="ALWAYS" />
+                                        <TextField fx:id="searchDescField" promptText="Description" styleClass="search-field" HBox.hgrow="ALWAYS" />
+                                        <TextField fx:id="searchLocationField" promptText="Location" styleClass="search-field" HBox.hgrow="ALWAYS" />
+                                        <TextField fx:id="searchDateField" promptText="mm/dd/yyyy" styleClass="search-field" />
+                                        <Button fx:id="searchButton" mnemonicParsing="false" onAction="#handleSearchItems" styleClass="search-button" text="🔍 Search Items" />
+                                        <Button mnemonicParsing="false" onAction="#clearSearchFilters" styleClass="clear-button" text="Clear" />
+                                    </children>
+                                </HBox>
+                            </children>
+                            <padding>
+                                <Insets bottom="50.0" left="60.0" right="60.0" top="20.0" />
+                            </padding>
+                        </VBox>
+
+                        <!-- Recent Items Section -->
+                        <VBox spacing="25.0" styleClass="recent-section">
+                            <children>
+                                <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                    <Label text="Recent Lost &amp; Found Items" styleClass="section-title">
+                                        <font>
+                                            <Font name="System Bold" size="24.0" />
+                                        </font>
+                                    </Label>
+                                    <Region HBox.hgrow="ALWAYS" />
+                                    <Button text="🔄 Refresh" onAction="#refreshItems" styleClass="refresh-button" />
+                                </HBox>
+                                <FlowPane fx:id="recentItemsContainer" hgap="25.0" vgap="20.0" alignment="CENTER" />
+
+                            </children>
+                            <padding>
+                                <Insets bottom="50.0" left="60.0" right="60.0" top="20.0" />
+                            </padding>
+                        </VBox>
+
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+
+        <!-- Footer -->
+        <HBox alignment="CENTER" spacing="20.0" styleClass="footer">
+            <children>
+                <Label text="🔍 Animo Found" styleClass="footer-logo" />
+                <Label text="Connecting lost items with their owners" styleClass="footer-tagline" />
+                <Region HBox.hgrow="ALWAYS" />
+                <Label text="Privacy Policy" styleClass="footer-link" />
+                <Label text="Terms of Service" styleClass="footer-link" />
+                <Label text="Contact Us" styleClass="footer-link" />
+                <Label text="© 2025 Animo Found. All rights reserved." styleClass="footer-copyright" />
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+            </padding>
+        </HBox>
+
+    </children>
+</VBox>
